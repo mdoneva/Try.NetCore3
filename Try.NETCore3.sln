@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeasurePerformanceCore3", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsynchronousStreams", "AsynchronousStreams\AsynchronousStreams.csproj", "{238F8BB0-9E47-443E-AEF2-56F5DCB9B519}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndicesAndRanges", "IndicesAndRanges\IndicesAndRanges.csproj", "{2731FB78-0833-4D92-945F-771BA75B9498}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IndicesAndRanges", "IndicesAndRanges\IndicesAndRanges.csproj", "{2731FB78-0833-4D92-945F-771BA75B9498}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patterns", "Patterns\Patterns.csproj", "{646CC9EE-7174-4BBB-B1E8-0697DA2A5D10}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{2731FB78-0833-4D92-945F-771BA75B9498}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2731FB78-0833-4D92-945F-771BA75B9498}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2731FB78-0833-4D92-945F-771BA75B9498}.Release|Any CPU.Build.0 = Release|Any CPU
+		{646CC9EE-7174-4BBB-B1E8-0697DA2A5D10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{646CC9EE-7174-4BBB-B1E8-0697DA2A5D10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{646CC9EE-7174-4BBB-B1E8-0697DA2A5D10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{646CC9EE-7174-4BBB-B1E8-0697DA2A5D10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
