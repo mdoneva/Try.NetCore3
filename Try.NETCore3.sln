@@ -5,13 +5,15 @@ VisualStudioVersion = 16.0.29318.209
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DefaultInterfaceMembers", "DefaultInterfaceMembers\DefaultInterfaceMembers.csproj", "{2DC0A05F-7D75-4C50-94D0-5F38377332EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefaultInterfaceMembersStandardCase", "DefaultInterfaceMembersStandardCase\DefaultInterfaceMembersStandardCase.csproj", "{08D08675-C472-41FE-9526-3003A8A62399}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DefaultInterfaceMembersStandardCase", "DefaultInterfaceMembersStandardCase\DefaultInterfaceMembersStandardCase.csproj", "{08D08675-C472-41FE-9526-3003A8A62399}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeasurePerformanceCore2.2", "MeasurePerformanceCore2.2\MeasurePerformanceCore2.2.csproj", "{2B48125D-90AF-4716-B763-44B1C2ADFEBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeasurePerformanceCore2.2", "MeasurePerformanceCore2.2\MeasurePerformanceCore2.2.csproj", "{2B48125D-90AF-4716-B763-44B1C2ADFEBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeasurePerformanceCore3", "MeasurePerformanceCore3\MeasurePerformanceCore3.csproj", "{C1665523-74AD-4278-95D5-FD0E11573EE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeasurePerformanceCore3", "MeasurePerformanceCore3\MeasurePerformanceCore3.csproj", "{C1665523-74AD-4278-95D5-FD0E11573EE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsynchronousStreams", "AsynchronousStreams\AsynchronousStreams.csproj", "{238F8BB0-9E47-443E-AEF2-56F5DCB9B519}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsynchronousStreams", "AsynchronousStreams\AsynchronousStreams.csproj", "{238F8BB0-9E47-443E-AEF2-56F5DCB9B519}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndicesAndRanges", "IndicesAndRanges\IndicesAndRanges.csproj", "{2731FB78-0833-4D92-945F-771BA75B9498}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{238F8BB0-9E47-443E-AEF2-56F5DCB9B519}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{238F8BB0-9E47-443E-AEF2-56F5DCB9B519}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{238F8BB0-9E47-443E-AEF2-56F5DCB9B519}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2731FB78-0833-4D92-945F-771BA75B9498}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2731FB78-0833-4D92-945F-771BA75B9498}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2731FB78-0833-4D92-945F-771BA75B9498}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2731FB78-0833-4D92-945F-771BA75B9498}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
