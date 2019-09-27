@@ -33,14 +33,14 @@ namespace NullableReferenceTypes
             Dog? dogWithNullName = DogFactory(5, null);
 
             Console.WriteLine("First dog is {0} and it is {1} years old", dogRex.Name, dogRex.Age);
-           // Console.WriteLine("Second dog is {0} and it is {1} years old", dogWithNullName.Name, dogWithNullName.Age + 1);
+            // Console.WriteLine("Second dog is {0} and it is {1} years old", dogWithNullName.Name, dogWithNullName.Age + 1);
 
-            #nullable disable
+#nullable disable
             string text = null;
             string? anotherText = null;
 
             //nullDog = null;
-            #nullable enable
+#nullable enable
 
             Console.WriteLine(text);
             Console.WriteLine(anotherText);

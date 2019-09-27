@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace DefaultInterfaceMembers
+﻿namespace DefaultInterfaceMembers
 {
     class DefaultInterfaceMembers
     {
