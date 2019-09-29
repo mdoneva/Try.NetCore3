@@ -64,9 +64,15 @@ namespace Patterns
         {
             foreach (var day in Enum.GetValues(typeof(WeekDay)))
             {
-                Console.WriteLine($@"Will I drink on {day}?
+                Console.WriteLine($@"Is it drinking night ({day})?
                                     Answer: {IsItDrinkingNight((WeekDay)day)}");
             }
+
+            Console.WriteLine();
+
+            Console.WriteLine($@"Where am I going on Mondays when it is raining?
+                                    Answer: {WhereAmIGoing(WeatherCondition.Rainy, WeekDay.Monday, false)}");
+
         }
     }
 }

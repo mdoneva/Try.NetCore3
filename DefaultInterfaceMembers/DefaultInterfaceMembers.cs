@@ -2,20 +2,15 @@
 {
     class DefaultInterfaceMembers
     {
-        public interface IFigure
-        {
-            public string Print() => $"This is IFigure: {this.ToString()}";
 
+        public interface IRectangle
+        {
+            public string Print() => $"This is IRectangle: {this.ToString()}";
         }
 
-        public interface IRectangle : IFigure
+        public interface ISquare
         {
-            public new string Print() => $"This is IRectangle: {this.ToString()}";
-        }
-
-        public interface ISquare : IFigure
-        {
-            public new string Print() => $"This is ISquare: {this.ToString()}";
+            public string Print() => $"This is ISquare: {this.ToString()}";
         }
 
         public interface ITetragon : IRectangle, ISquare { }

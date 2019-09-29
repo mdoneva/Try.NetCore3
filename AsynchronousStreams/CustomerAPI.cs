@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace AsynchronousStreams
@@ -13,29 +12,11 @@ namespace AsynchronousStreams
 
     public static class CustomerAPI
     {
-        public static async IAsyncEnumerable<Customer> GetCustomersAsyncStream(string[] names)
+        public static async Task<Customer> GetCustomerAsync(string name)
         {
-            foreach (var name in names)
-            {
-                // Simulate waiting for data to come through the API
-                await Task.Delay(1000);
-                yield return new Customer { Age = GetAge(), Name = name };
-            }
-        }
-
-        // Common intuitive approach, it's a trap
-        public static async Task<IEnumerable<Customer>> GetCustomersAsync(string[] names)
-        {
-            List<Customer> customers = new List<Customer>();
-
-            foreach (var name in names)
-            {
-                // Simulate waiting for data to come through. 
-                await Task.Delay(1000);
-                customers.Add(new Customer { Age = GetAge(), Name = name });
-            }
-
-            return customers;
+            // Simulate waiting for data to come through the API
+            await Task.Delay(1000);
+            return new Customer { Age = GetAge(), Name = name };
         }
 
         private static int GetAge()
