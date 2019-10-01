@@ -25,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NullableReferenceTypes", "N
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NullCoalescingAssignment", "NullCoalescingAssignment\NullCoalescingAssignment.csproj", "{E3F83445-EBA9-4ACA-A7EC-AD27B084D0BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWPF", "TestWPF\TestWPF.csproj", "{F56F91FA-8701-4C90-B51E-D4C45A86E416}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestWPF", "TestWPF\TestWPF.csproj", "{F56F91FA-8701-4C90-B51E-D4C45A86E416}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

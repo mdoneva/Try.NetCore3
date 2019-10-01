@@ -41,22 +41,20 @@ namespace Patterns
         }
 
         static PlaceToBe WhereAmIGoing(WeatherCondition weather, WeekDay weekDay, bool hasVacation) =>
-            (weather, weekDay, hasVacation) switch
-            {
-                (WeatherCondition.Sunny, WeekDay.Tuesday, true) => PlaceToBe.Beach,
-                (WeatherCondition.Snowy, WeekDay.Friday, true) => PlaceToBe.Mountain,
-                (WeatherCondition.Rainy, WeekDay.Monday, false) => PlaceToBe.Work,
-                (WeatherCondition.Cloudy, _, false) => PlaceToBe.Park,
-                _ => PlaceToBe.InBed
-            };
+                (weather, weekDay, hasVacation) switch
+                {
+                    (WeatherCondition.Sunny, WeekDay.Tuesday, true) => PlaceToBe.Beach,
+                    (WeatherCondition.Snowy, WeekDay.Friday, true) => PlaceToBe.Mountain,
+                    (WeatherCondition.Rainy, WeekDay.Monday, false) => PlaceToBe.Work,
+                    (WeatherCondition.Cloudy, _, false) => PlaceToBe.Park,
+                    _ => PlaceToBe.InBed
+                };
 
         static Probability IsItDrinkingNight(WeekDay weekDay) =>
             weekDay switch
             {
-                WeekDay.Monday => Probability.No,
+                var x when x is WeekDay.Monday || x is WeekDay.Thursday => Probability.No,
                 WeekDay.Tuesday => Probability.Maybe,
-                WeekDay.Wednesday => Probability.Surely,
-                WeekDay.Thursday => Probability.No,
                 _ => Probability.Surely
             };
 
@@ -72,7 +70,6 @@ namespace Patterns
 
             Console.WriteLine($@"Where am I going on Mondays when it is raining?
                                     Answer: {WhereAmIGoing(WeatherCondition.Rainy, WeekDay.Monday, false)}");
-
         }
     }
 }
