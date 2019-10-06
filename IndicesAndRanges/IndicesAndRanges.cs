@@ -20,7 +20,6 @@ namespace IndicesAndRanges
 
         static void Main(string[] args)
         {
-
             Console.WriteLine($"The last word is <{words[^1]}>");
             Console.WriteLine();
 
@@ -36,6 +35,7 @@ namespace IndicesAndRanges
             Console.WriteLine();
 
             Range range = ^2..;
+            Console.WriteLine($"Last exclusive end index of range [^2..] is: {range.End}");
             Console.WriteLine("Last two words are:");
             foreach (var word in words[range])
             {

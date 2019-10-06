@@ -1,5 +1,10 @@
-﻿namespace DefaultInterfaceMembers
+﻿using System;
+
+namespace DefaultInterfaceMembers
 {
+    /// <summary>
+    /// Be careful when using default implementations
+    /// </summary>
     class DefaultInterfaceMembers
     {
 
@@ -10,7 +15,7 @@
 
         public interface ISquare
         {
-            public string Print() => $"This is ISquare: {this.ToString()}";
+            //public string Print() => $"This is ISquare: {this.ToString()}";
         }
 
         public interface ITetragon : IRectangle, ISquare { }
@@ -22,7 +27,7 @@
             ITetragon tetragon = new Tetragon();
             // C# 8.0 will solve this issue by introducing the most specific override rule. 
             // It means that in our case illustrated above, the compiler will issue an error and won’t let us do this.
-            //Console.WriteLine(value: $"{tetragon.Print()}");
+            Console.WriteLine(value: $"{tetragon.Print()}");
         }
     }
 }

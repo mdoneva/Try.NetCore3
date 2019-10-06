@@ -6,37 +6,40 @@ namespace AsynchronousStreams
 {
     class AsynchronousStreams
     {
-        static string[] names = new string[] { "John", "Jack", "Ana", "Steven", "Jane", "Peter", "Chris" };
-
-        //static async Task Main(string[] args)
-        //{
-        //    IAsyncEnumerable<Customer> customers = ClientAPI.GetCustomersAsyncStream(names);
-
-        //    // Consuming an asynchronous stream requires you to add the 
-        //    // await keyword before the foreach keyword
-        //    await foreach (var customer in customers)
-        //    {
-        //        Console.WriteLine(customer);
-        //    }
-        //}
+        static string[] names = new string[] { "Milk", "Eggs", "Bread", "Water", "Apples", "Tomatoes", "Butter" };
 
         static async Task Main(string[] args)
         {
-            IEnumerable<Customer> customers = await ClientAPI.GetCustomersAsync(names);
+            IEnumerable<Product> products = await ProductAPI.GetProductsAsync(names);
 
-            foreach (var customer in customers)
+            foreach (var product in products)
             {
-                Console.WriteLine(customer);
+                Console.WriteLine(product);
             }
         }
 
         //static async Task Main(string[] args)
         //{
-        //    foreach (var name in names)
+        //    IAsyncEnumerable<Product> products = ProductAPI.GetProductsAsyncStream(names);
+
+        //    // Consuming an asynchronous stream requires you to add the 
+        //    // await keyword before the foreach keyword
+        //    await foreach (var product in products)
         //    {
-        //        var customer = await ClientAPI.GetCustomerAsync(name);
-        //        Console.WriteLine(customer);
+        //        Console.WriteLine(product);
         //    }
         //}
+
+
+        #region OneProduct
+        //static async Task Main(string[] args)
+        //{
+        //    foreach (var name in names)
+        //    {
+        //        var product = await ProductAPI.GetProductAsync(name);
+        //        Console.WriteLine(product);
+        //    }
+        //}
+        #endregion
     }
 }

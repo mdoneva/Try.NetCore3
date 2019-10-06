@@ -22,6 +22,14 @@ namespace Patterns
             Sunday
         }
 
+        static Probability IsItDrinkingNight(WeekDay weekDay) =>
+           weekDay switch
+           {
+               WeekDay.Tuesday => Probability.Maybe,
+               var x when x is WeekDay.Monday || x is WeekDay.Thursday => Probability.No,
+               _ => Probability.Surely
+           };
+
         public enum WeatherCondition
         {
             Sunny,
@@ -49,14 +57,6 @@ namespace Patterns
                     (WeatherCondition.Cloudy, _, false) => PlaceToBe.Park,
                     _ => PlaceToBe.InBed
                 };
-
-        static Probability IsItDrinkingNight(WeekDay weekDay) =>
-            weekDay switch
-            {
-                var x when x is WeekDay.Monday || x is WeekDay.Thursday => Probability.No,
-                WeekDay.Tuesday => Probability.Maybe,
-                _ => Probability.Surely
-            };
 
         static void Main(string[] args)
         {

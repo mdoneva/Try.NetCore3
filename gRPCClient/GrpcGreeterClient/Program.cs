@@ -1,8 +1,7 @@
-﻿using System;
-using System.Net.Http;
-using System.Threading.Tasks;
+﻿using Grpc.Net.Client;
 using GrpcGreeter;
-using Grpc.Net.Client;
+using System;
+using System.Threading.Tasks;
 
 // For reference, 
 // see https://docs.microsoft.com/en-us/aspnet/core/tutorials/grpc/grpc-start?view=aspnetcore-3.0&tabs=visual-studio
@@ -17,7 +16,7 @@ namespace GrpcGreeterClient
             var channel = GrpcChannel.ForAddress("https://localhost:5001");
             var client = new Greeter.GreeterClient(channel);
             var reply = await client.SayHelloAsync(
-                              new HelloRequest { Name = "Maria" });
+                              new HelloRequest { Name = "World" });
             Console.WriteLine("Greeting: " + reply.Message);
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey();

@@ -31,7 +31,7 @@ namespace DefaultInterfaceMembersStandardCase
             Console.WriteLine($"Area of rectangle is {rectangle.Area()}");
             //Console.WriteLine($"{rectangle.Print()}");
 
-            IFigure square = new Square { SideA = 4 };
+            Square square = new Square { SideA = 4 };
             Console.WriteLine($"Area of square is {square.Area()}");
             //Console.WriteLine($"{square.Print()}");
         }
