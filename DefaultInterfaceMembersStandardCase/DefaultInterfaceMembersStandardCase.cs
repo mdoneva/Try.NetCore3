@@ -7,7 +7,7 @@ namespace DefaultInterfaceMembersStandardCase
         public interface IFigure
         {
             public double Area();
-            public string Print() => $"Print() of IFigure: {this.ToString()} at {DateTime.Now}";
+            //public string Print() => $"Print() of IFigure: {this.ToString()} at {DateTime.Now}";
         }
 
         public class Rectangle : IFigure
