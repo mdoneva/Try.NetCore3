@@ -6,11 +6,9 @@ namespace AsynchronousStreams
 {
     class AsynchronousStreams
     {
-        static string[] names = new string[] { "Milk", "Eggs", "Bread", "Water", "Apples", "Tomatoes", "Butter" };
-
         static async Task Main(string[] args)
         {
-            IEnumerable<Product> products = await ProductAPI.GetProductsAsync(names);
+            IEnumerable<Product> products = await ProductAPI.GetProductsAsync();
 
             foreach (var product in products)
             {
@@ -20,7 +18,7 @@ namespace AsynchronousStreams
 
         //static async Task Main(string[] args)
         //{
-        //    IAsyncEnumerable<Product> products = ProductAPI.GetProductsAsyncStream(names);
+        //    IAsyncEnumerable<Product> products = ProductAPI.GetProductsAsyncStream();
 
         //    // Consuming an asynchronous stream requires you to add the 
         //    // await keyword before the foreach keyword
@@ -30,8 +28,9 @@ namespace AsynchronousStreams
         //    }
         //}
 
-
         #region OneProduct
+        //static string[] names = new string[] { "Milk", "Eggs", "Bread", "Water", "Apples", "Tomatoes", "Butter" };
+
         //static async Task Main(string[] args)
         //{
         //    foreach (var name in names)

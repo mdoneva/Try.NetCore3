@@ -13,18 +13,19 @@ namespace AsynchronousStreams
 
     public static class ProductAPI
     {
-        private static async Task<Product> GetProductAsync(string name)
+        private static readonly string[] productNames = new string[] { "Milk", "Eggs", "Bread", "Water", "Apples", "Tomatoes", "Butter" };
+        public static async Task<Product> GetProductAsync(string name)
         {
             // Simulate waiting for data to come through the API
             await Task.Delay(1000);
             return new Product { Price = GetPrice(), Name = name };
         }
 
-        public static async Task<IEnumerable<Product>> GetProductsAsync(string[] names)
+        public static async Task<IEnumerable<Product>> GetProductsAsync()
         {
             List<Product> products = new List<Product>();
 
-            foreach (var name in names)
+            foreach (var name in productNames)
             {
                 products.Add(await GetProductAsync(name));
             }
@@ -32,9 +33,9 @@ namespace AsynchronousStreams
             return products;
         }
 
-        public static async IAsyncEnumerable<Product> GetProductsAsyncStream(string[] names)
+        public static async IAsyncEnumerable<Product> GetProductsAsyncStream()
         {
-            foreach (var name in names)
+            foreach (var name in productNames)
             {
                 yield return await GetProductAsync(name);
             }
